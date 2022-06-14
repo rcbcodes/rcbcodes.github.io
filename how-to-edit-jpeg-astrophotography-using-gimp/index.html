@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="../style/index.css">
+        <link rel="stylesheet" href="index.css">
+        <label for="dark-mode">Dark Mode
+            <input type="checkbox" name="dark-mode" id="dark-mode-checkbox" onchange="darkmode()">
+        </label>
+    </head>
+    <body id="dark-mode">
+        <div class="md-ml-300px md-mr-300px">
+            <div class="div-center">
+                <h1 class="mb-50px text-center md-large-title-text sm-title-text">HOW TO EDIT JPEG ASTROPHOTOGRAPHY USING GIMP</h1>
+                <p class="text-spacing-25px text-font">One of the biggest parts of astrophotography is editing your photos. This
+                    tutoriol will show you how to edit your jpeg astrophotography photos using the free software gimp.</p>
+                <img class="image-size-95 image-center mb-20px" src="images/stacked_image.jpg" alt="Unedited picture of the stars">
+                <img class="image-size-95 image-center" src="images/stacked_image_finished.jpg" alt="Edited picture of the stars">
+                <p class="text-center mb-50px text-font text-spacing-25px">Above are both the unedited and edited images</p>
+                <p class="text-font text-spacing-25px">Unedited jpeg images look good, but simply not as good as edited pictures </p>
+                <h1>Step one: Removing the problems</h1>
+                <img class="image-size-95 image-center" src="images/stacked_image_problems.jpg" alt="The picture of the stars, showing the problems">
+                <p class="text-font text-spacing-25px">In the image above the red lines show two problems with my picture. You may not
+                    think it's a big deal, but after editing they become more obvious if not dealt with. I believe the problems in this
+                    photo are amp glow but I will just be calling them problems. Also, this is just one way of removing the problems,
+                    another way, which I mostly do now, is using dark frames (I won't be going over dark frames) when stacking then
+                    cropping off whatever is still there. Not everyone's pictures have problems like this, if so Skip to step 2 </p>
+                <p class="text-font text-spacing-25px">The first thing to do is select one of the problems using the free select tool as
+                    shown in the picture below. Then click "select" (on the top bar) and in the drop down menu click feather. You will
+                    need to feather your select according to how big your problem is, I usually feather around 300 for this part</p>
+                <img class="image-size-95 image-center" src="images/stacked_image_1_free_select_tool.jpg" alt="The picture of the stars, selecting one problem">
+                <P class="text-font text-spacing-25px">Next, in order to remove the first problem your going to need to click "Colors"
+                    (on the top bar). In the drop down menu click on "Curves". Near the top of the curves window where it says "channel"
+                    (it should currently be set to "value") click on it and change it to the red channel. Click on the bottem of the red
+                    line and either drag it down a little, or click on the small arrow facing upwards where it says "imput".</P>
+                <img class="image-size-50 image-center" src="images/stacked_image_2.jpg" alt="The red channel curves">
+                <p class="text-font text-spacing-25px">Put the red line down until some of the problem matches the rest of the picture
+                    as seen in the image below</p>
+                <img class="image-size-95 image-center" src="images/stacked_image_3.jpg" alt="The picture of the stars with some of the red in the problem gone">
+                <p class="text-font text-spacing-25px">Now zoom in on the problem, reselect a smaller area where the pink mostly is, and
+                    feather (I generally feather around 150 for this part). Then use the curves to make the problem match the rest of
+                    the picture in the sense of blue and red. the problem might still be too bright.</p>
+                <p class="text-font text-spacing-25px">If the problem is too bright, simply click on "Colors" and click on
+                    "Brightness-Contrast" in the drop down menu and adjust the brightness to match the rest of the picture the best
+                    possible. Then you can unselect by pressing shift + ctr + A</p>
+                <p class="text-font text-spacing-25px">Repeat the process with all of the problems</p>
+                <img class="image-size-95 image-center" src="images/stacked_image_problems_removed.jpg" alt="The picture of the stars with all the problems fixed">
+                <p class="text-font text-spacing-25px text-center">The picture with all the problems fixed</p>
+                <h1>Step two: The editing</h1>
+                <p class="text-font text-spacing-25px"><strong>The first</strong> thing to do in this step is removing some red from
+                    the picture, (this part is optinal) click on "Colors" then "Curves" and then switch to the red channel, increase
+                    the imput on the bottem of the red line until the picture doesn't have a red tint.</p>
+                <img class="image-size-95 image-center" src="images/stacked_image_8.jpg" alt="The picture of the stars with some red removed">
+                <p class="text-font text-spacing-25px"><strong>The second</strong> thing to do in this step is using the "Levels" to
+                    make the picture darker and to make the stars stand out more. Click on "Colors" and in the drop down menu click on
+                    "Levels". Now in the "imput levels" section use the slide the middle slider right until the picture is as dark as
+                    you want it.</p>
+                <img class="image-size-95 image-center" src="images/stacked_image_10.jpg" alt="The picture of the stars after editing with the levels">
+                <p class="text-font text-spacing-25px">If you didn't make some of the "problems" (referring to the last step) dark
+                    enough, then now is a good time to make them a little darker.</p>
+                <p class="text-font text-spacing-25px"><strong>If your photo is of or near the core of the milky way then after all of
+                    the problems are fixed I recommend you doing part 5 of this step before parts 2, 3, and 4</strong></p>
+                <p class="text-font text-spacing-25px"><strong>The third</strong> thing to do in this step is to increase the contrast
+                    (in "Brightness-Contrast" which is in "Colors"). Basically just increase the contrast until the picture looks the
+                    best, Just don't go to far.</p>
+                <p class="text-font text-spacing-25px"><strong>The fourth</strong> thing to do in this step is to even out the
+                    brightness. Select (using the "free select tool") any brighter areas in your picture and darken them, using
+                    "Brightness-Contrast", until they look the same as the other areas in your image</p>
+                <img class="image-size-95 image-center" src="images/stacked_image_12.jpg" alt="The picture of the stars after leveling out the brightness">
+                <p class="text-font text-spacing-25px">If there are a lot of trees in your picture you may need to use the "free select
+                    tool" to select the trees, then feather around 50-120. Then decrease the saturation by clicking "Colors" then in the
+                    drop down menu you can click "Saturation" and then decrease it until the trees look more normal. You just can't
+                    decrease the saturation to much, or the sky around the trees will look gray.</p>
+                <p class="text-font text-spacing-25px"><strong>The fifth (optinal)</strong> thing to do in this step, which I would actually recomend you do this after the first part in this step assuming that all the problems are fixed, is to fix the color
+                    balance if your picture is of or near the core of the milky way. To do this, click on "Colors" and in the drop down
+                    menu click on "Levels" then click on what looks like a color picker with a gray square. (see picture below)</p>
+                <img class="image-size-50 image-center" src="images/levels_color_balance.jpg" alt="The color balance using levels">
+                <p class="text-font text-spacing-25px">Now click anywhere on the picture make sure to click a lot of times around the
+                    photo to figure out what looks best.</p>
+                <img class="image-size-75 image-center" src="images/color_balance.png" alt="After and before with fixing the color balance">
+                <h1>Finish</h1>
+                <img class="image-size-95 image-center mb-50px" src="images/stacked_image_finished.jpg" alt="The picture of the stars after all the editing">
+                <p class="text-font text-spacing-25px">Remember that every photo is different, so experiment with other ideas/tools in
+                    gimp as well.</p>
+                <p><a href="https://www.gimp.org/" class="nicer-link">Gimp</a></p>
+                <script src="../style/index.js"></script>
+            </div>
+        </div>
+    </body>
+</html>

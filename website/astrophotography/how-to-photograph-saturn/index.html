@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../../style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
     </head>
     <body>
         <h1>How to photograph Saturn</h1>
@@ -45,7 +48,7 @@
         <h2>Finding Saturn</h2>
         <p>The first thing to do is of course to set up your telescope. Then bring out your computer, eyepieces and barlow lens, and camera.</p>
         <p>Something to keep in mind is that your telescope might need some time to acclimate to the tempenture outside, especially if you have an even larger telescope. I haven't ever really had a problem with this, maybe because it takes me some time to find Saturn, and actaully start capturing.</p>
-        <p>Next, you should open Sharpcap on your computer, and connect your camera to it. You can do this by plugging it into your computer using the cable provided with the camera. Then click on the &quot;Cameras&quot; button in the top-left of Sharpcap, and choose your camera.</p>
+        <p>Next, you should open Sharpcap on your computer, and connect your camera to it. You can do this by plugging it into your computer using the cable provided with the camera. Also, screw on the uv/ir filter onto your camera (you need this if your camera lets through ultraviolet, or infrared light.). Then click on the &quot;Cameras&quot; button in the top-left of Sharpcap, and choose your camera.</p>
         <p>Also, make sure your exposure is not super low, and set your iso/gain fairly high to make sure Saturn will show up (don't put your exposure so high that the framerate of your camera gets too low)</p>
         <p><em>Note: if you are using a dslr, then</em><br>
         <em>you won't need to bring a computer outside</em></p>
@@ -71,7 +74,7 @@
         <p>Exposure: 16.69ms</p>
         </li>
         </ul>
-        <p>Now click the &quot;Start Capture&quot; button in the top-left corner of Sharpcap, this should bring up a window before actually starting the video. Move this window off to the side and then place your mouse cursor over the start button, but don't click it.</p>
+        <p>Now click the &quot;Start Capture&quot; button in the top left corner of Sharpcap, this should bring up a window before actually starting the video. Move this window off to the side and then place your mouse cursor over the start button, but don't click it.</p>
         <p>Figure out which direction Saturn is moving on your computer screen, and position the planet on the opposite side/corner, so that it will stay in frame for the longest amount of time. Now click start!</p>
         <p>Wait until Saturn is almost out of view, then click the &quot;Stop capture&quot; button.</p>
         <p>Now, take a few more videos, using the same proccedures. This way, you will be able to either choose the best video, or combine them get the best final image.</p>
@@ -88,5 +91,46 @@
         <p><a href="https://www.autostakkert.com/">Autostakkert - to stack the best frames from the video</a></p>
         </li>
         </ul>
+        <h3>PIPP - Planetary Imaging PreProcessor</h3>
+        <p>PIPP is used for  debayering videos, and making the planet not move in the video, so that it is ready for stacking.</p>
+        <p>Here is a short explanation of what debayering is: Sometimes videos are stored in a black and white video with a debayer pattern, in order to save space on your computer. debayering simply uses that pattern to turn them into a color video.</p>
+        <p>After opening PIPP, the first thing you should do is click on the planetary checkbox near the bottem left of the window.</p>
+        <p>Next load your videos into the program. You can do this by either dragging them into the window, or pressing the file button, (top left corner) then clicking &quot;add source files&quot; and finding them in the window that shows up.</p>
+        <p>A window might pop up asking you if you would like to debayer the videos. If your videos look black and white, and your camera is a color camera, click yes. If you need to debayer your images and the window didn't pop up, then go to the &quot;input options&quot; tab. Under &quot;colour debayer&quot; (bottom right) click &quot;Debayer Monochrome Frames&quot;. Next, under &quot;Colour Debayer Options&quot; you will see four capital letters, choose whichever debayer pattern you need to use for your camera. For the camera I used (ASI462MC) the pattern needs to be set to &quot;RGGB&quot;, though you will need to figure out what pattern to use for your camera.</p>
+        <p>That should be all the settings you need to set for this program, so click the &quot;Do Proccessing&quot; tab, then press &quot;Start Proccessing&quot;. After the program finishes, you should have a folder which starts with &quot;pipp&quot;, in it should be the output from the program. The video should be color, and the planet should not move much anymore.</p>
+        <h3>Autostakkert</h3>
+        <p>Autostakkert is used for stacking the best frames in your video to create a much cleaner image than if you just took one single frame out of your video.</p>
+        <p>If you take a look around Autostakkert, you might notice three buttons labled 1, 2, and 3. As you might expect, you will be using those buttons in that order. You might also notice that there are two windows, you will need to use both of them.</p>
+        <p>First you should click on the button &quot;1) Open&quot; then find the video that PIPP created in the pop up window, and open it. Next click &quot;2) Analyse&quot;.</p>
+        <p>After it's done Analysing your video, you will notice that there is a graph in the middle of the window you are currently using. This graph basically shows you what percentage of your frames are good quality, and where the quality drops. You will need to decide how many frames to use depending on how your graph looks, 20%, 30%, 50%, 70% etc. You can click around on the graph, to see what your frames look like at a specific percentage (it will show you on the other window). After you have what percentage you would like to stack, under &quot;Frame percentage to stack&quot; (near the top-right) fill in one of the four boxes with the percentage. You might need to do a little bit of experimenting with how many frames to stack, so you can fill in as many of the boxes you desire, and the Autostakkert will stack your video in all the different ways you filled out.</p>
+        <p>Now, on the other window, you should see a picture of Saturn. Start off by clicking the &quot;Place AP grid&quot; button (bottem-left of the second window). You should see some boxes appear, if not you will have to adjust the settings I'm about to discuss.Basically what you will be trying to do on this window, is getting the boxes to cover all of Saturn, but not too much.</p>
+        <p>Above the button you just pressed, you should see a minimum brightness adjuster. Adjusting this should change how the boxes are placed, after you click the &quot;Place AP grid&quot; button again.</p>
+        <p>Another thing you can adjust is the AP size. You can do this above the brightness adjuster. Every time you change something, to see it you will need to press the &quot;Place AP grid&quot; button. Make sure all of Saturns rings get covered, but try to use the least amount of boxes as possible.</p>
+        <p>Finally click the &quot;3) stack&quot; button. Autostakkert will go through the stacking proccess, and produce one, or up to four different images (depending on if you chose more than one percentage of frames to stack).</p>
+        <p>Don't worry if your images look a bit blurry at this point, that's normal. Choose the best image the program created, and move on to the post proccessing to sharpen up your image!</p>
+        <p><img src="saturn-just-stacked.jpg" alt="Saturn after stacking"></p>
+        <p><em>This photo is compressed, however</em><br>
+        <em>It is much more blurry than the fully</em><br>
+        <em>proccessed image</em></p>
+        <h2>Post proccessing</h2>
+        <p>One free program will be used for the post proccessing: <a href="https://www.astronomie.be/registax/">Registax</a>.</p>
+        <p>First open up Registax, and you can drag the stacked image from Autostakkert into the Registax window. Or if you prefer press the &quot;select&quot; button in the top left corner, and find your image from there.</p>
+        <p>A few windows may pop up: if it says &quot;Stretch intesity-levels&quot; I have always clicked &quot;No&quot;. After that if it asks if you want to proccess in color, click yes (as long as you have a color image).</p>
+        <p>Registax should immediately skip to the &quot;Wavelet&quot; tab (top left) because you have already aligned and stacked the video. On the right you should see a &quot;Functions&quot; group. These buttons allow you to do different important proccesses. Under &quot;Functions&quot; you can open up the zoomed view, in order to see details better.</p>
+        <p>Now to actually begin proccesing. Press the &quot;Histogram&quot; button under &quot;Functions&quot; to open up the histogram (I would recommend keeping this open the entire time, to make sure nothing passes the right side of it, and nothing goes crazy). Using the histogram, you are going to have to stretch and cut the image.</p>
+        <p>To stretch it, pull the arrow on the bottem right of the histogram somewhat into the empty space. How much you pull it in will depend on how much empty space you have, I would do more or less around half of the empty space. This way you will have space to go further in the rest of the proccess.</p>
+        <p>Next, cut some of the data off of the left side of the histogram in order to cut out some of the blurry edges of Saturn. To do this, drag the arrow on the bottem left of the histogram into the spike of data on the left of the histogram. Don't go too far, but A lot of the spike (if the spike is more spread out, then don't cut the entire thing off). To actually cut it off, click the stretch button again.</p>
+        <p><img src="cutting-off-the-left-of-the-histogram.png" alt="Cutting off the left of the histogram"></p>
+        <p>Saturn should now look a bit less blurry. But you may notice some chromatic aberration (color fringing) around the edges of the planet, especially with the rings, to fix this, click &quot;RGB Align&quot; under &quot;Functions&quot; and drag the green box, that should have appeared on the image of Saturn, to cover just all of the planet. On the new window, which showed up, click &quot;Estimate&quot; this should have, for the most part fixed this issue. You can now close the &quot;RGB Align&quot; window.</p>
+        <p>You might also notice that the colors (red green and blue) lines on the histogram don't line up. To fix this, click &quot;RGB Balance&quot; under &quot;Functions&quot;. On the pop up window, press &quot;Auto balance&quot;. Most of the time this will work, and the lines will be mostly lined up, and Saturn will look a more natural color.</p>
+        <p>Auto balance can, however fail. If it does, then use the settings on the window - drag the red, green, and blue sliders, and use the colourweights to manually get the rgb lines to line up on the histogram. Also make sure Saturn look natural on the preview. The &quot;RGB balance&quot; window can be closed now.</p>
+        <p>Your image is almost done! But there still is one major proccess to do, and that is the wavelets. These are the bars on the left side of registax. There is a total of six of them. Normally I only really use the first three, though I would definitely suggest playing around with the other three.</p>
+        <p>There is no one way to do these, I just reccommend going through them top to bottom, and playing around with them until you get the best results. I will, however give a few suggestions with what I might start with.</p>
+        <p>First, drag the top wavelet to around maybe 50, or 70. The wavelets produce a bit of noise, so click the denoise (the first number with arrows that you can click) a few times (2-5). Then press sharpen (to the right of denoise) once or twice. Next, move the second wavelet to around 20-30, and press denoise a few times, then sharpen maybe 2-3 times. Watch out for any remaining chromatic aberration, as sharpening will make it more noticeable. Lastly, bring the third slider to maybe 40-50, denoise a few times, finally sharpen 1-2 times.</p>
+        <p>And you are done!</p>
+        <p>Now click the &quot;Save image&quot; button near the top left of the window, and choose a name. Then click &quot;Save&quot;.</p>
+        <p>You could bring the photo into photoshop or gimp, however I haven't found that neccessary.</p>
+        <p>Never be afraid to experiment, edit your photo as many times as you wish!</p>
+        <p><img src="saturn.jpg" alt="Fully proccesed image of Saturn"></p>
     </body>
 </html>

@@ -24,3 +24,10 @@ img{
    margin-right: auto;
    max-width: 100%;
 }
+blockquote{
+   padding: 2px;
+   padding-left: 10px;
+   border: 0px solid;
+   border-color: lightgray;
+   border-left-width: 5px;
+}
